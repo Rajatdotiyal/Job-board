@@ -1,5 +1,5 @@
 const express = require("express");
-const { authMiddleware } = require("../middleware");
+const { authMiddleware } = require("../api/authMiddleware");
 const { application, Job } = require("../db");
 const multer = require("multer");
 

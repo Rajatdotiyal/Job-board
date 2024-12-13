@@ -3,7 +3,7 @@ const zod = require("zod");
 const jwt = require("jsonwebtoken");
 const { User } = require("../db");
 const { JWT_SECRET } = require("../config");
-const { authMiddleware } = require("../middleware");
+const { authMiddleware } = require("../api/authMiddleware");
 const multer = require("multer")
 const router = express.Router();
 
