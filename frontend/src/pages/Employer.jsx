@@ -39,7 +39,7 @@ export default function Employer() {
             return;
         }
         try {
-            const response = await axios.post("https://job-board-6coklfpr2-rajat-dotiyals-projects.vercel.app/api/v1/user/info/empdetails", {
+            const response = await axios.post("https://job-board-henna-omega.vercel.app/api/v1/user/info/empdetails", {
                 companyName: compName,
                 companySize: compSize,
                 industry,

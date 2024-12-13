@@ -42,7 +42,7 @@ export default function CreateJob() {
     };
 
     try {
-      const response = await axios.post("https://job-board-6coklfpr2-rajat-dotiyals-projects.vercel.app/api/v1/job/jobs",
+      const response = await axios.post("https://job-board-henna-omega.vercel.app/api/v1/job/jobs",
         formattedData, {
         headers: {
           Authorization: localStorage.getItem("token")

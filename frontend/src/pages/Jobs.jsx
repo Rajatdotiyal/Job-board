@@ -13,7 +13,7 @@ export default function Jobs() {
 
   useEffect(() => {
       const fetchData = async () => {
-          const response = await axios.get("https://job-board-6coklfpr2-rajat-dotiyals-projects.vercel.app/api/v1/job/jobs", {
+          const response = await axios.get("https://job-board-henna-omega.vercel.app/api/v1/job/jobs", {
               headers: {
                   Authorization: localStorage.getItem("token"),
               },

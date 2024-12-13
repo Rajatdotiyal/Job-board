@@ -31,7 +31,7 @@ export default function JobDetail() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://job-board-6coklfpr2-rajat-dotiyals-projects.vercel.app/api/v1/job/jobs/${id}`,
+          `https://job-board-henna-omega.vercel.app/api/v1/job/jobs/${id}`,
           {
             headers: {
 
@@ -69,7 +69,7 @@ export default function JobDetail() {
    
     try{
 
-      const response = await axios.post(`https://job-board-6coklfpr2-rajat-dotiyals-projects.vercel.app/api/v1/app/application?jobId=${job._id}`,
+      const response = await axios.post(`https://job-board-henna-omega.vercel.app/api/v1/app/application?jobId=${job._id}`,
         formData, 
         {
         headers: {
