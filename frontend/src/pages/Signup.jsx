@@ -35,7 +35,7 @@ export default function Signup() {
 
         try {
 
-            const response = await axios.post("http://localhost:3000/api/v1/user/signup", {
+            const response = await axios.post("https://job-board-6coklfpr2-rajat-dotiyals-projects.vercel.app/api/v1/user/signup", {
                 firstname: firstname,
                 lastname: lastname,
                 email: email,

@@ -21,7 +21,7 @@ export default function Home() {
     const fetchJobs = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:3000/api/v1/job/jobs", {
+        const response = await axios.get("https://job-board-6coklfpr2-rajat-dotiyals-projects.vercel.app/api/v1/job/jobs", {
           headers: {
             Authorization: localStorage.getItem("token"),
           },
@@ -42,7 +42,7 @@ export default function Home() {
       if (userRole === "employer" && userId) {
         setLoading(true);
         try {
-          const response = await axios.get(`http://localhost:3000/api/v1/job/user/${userId}`, {
+          const response = await axios.get(`https://job-board-6coklfpr2-rajat-dotiyals-projects.vercel.app/api/v1/job/user/${userId}`, {
             headers: {
               Authorization: localStorage.getItem("token"),
             },

@@ -20,7 +20,7 @@ export default function Signin() {
         setError(null);
 
         try {
-            const response = await axios.post("http://localhost:3000/api/v1/user/signin", {
+            const response = await axios.post("https://job-board-6coklfpr2-rajat-dotiyals-projects.vercel.app/api/v1/user/signin", {
                 email: email,
                 password: password
             })

@@ -16,7 +16,7 @@ const Applicants = () => {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `http://localhost:3000/api/v1/app/job/${jobId}/applicants`,
+          `https://job-board-6coklfpr2-rajat-dotiyals-projects.vercel.app/api/v1/app/job/${jobId}/applicants`,
           {
             headers: {
               Authorization: localStorage.getItem("token"), // Ensure employer's token is valid

@@ -18,7 +18,7 @@ export default function Role() {
         setError(null);
 
         try {
-            const response = await axios.post("http://localhost:3000/api/v1/user/info/role", {
+            const response = await axios.post("https://job-board-6coklfpr2-rajat-dotiyals-projects.vercel.app/api/v1/user/info/role", {
                 role: selectedRole
             }, {
                 headers: {

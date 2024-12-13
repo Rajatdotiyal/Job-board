@@ -36,7 +36,7 @@ export default function JobSeeker() {
         formData.append("resume", resume);
 
         try {
-            const response = await axios.post("http://localhost:3000/api/v1/user/info/jsdetails",
+            const response = await axios.post("https://job-board-6coklfpr2-rajat-dotiyals-projects.vercel.app/api/v1/user/info/jsdetails",
                 formData,
                 {
                     headers: {
