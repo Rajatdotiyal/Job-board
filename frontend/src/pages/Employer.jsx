@@ -39,7 +39,7 @@ export default function Employer() {
             return;
         }
         try {
-            const response = await axios.post("https://job-board-henna-omega.vercel.app/api/v1/user/info/empdetails", {
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/info/empdetails`, {
                 companyName: compName,
                 companySize: compSize,
                 industry,

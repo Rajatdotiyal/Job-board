@@ -20,7 +20,7 @@ export default function Signin() {
         setError(null);
 
         try {
-            const response = await axios.post("https://job-board-henna-omega.vercel.app/api/v1/user/signin", {
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/signin`, {
                 email: email,
                 password: password
             })

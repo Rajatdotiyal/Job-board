@@ -6,36 +6,21 @@ const cors = require("cors");
 
 const app = express();
 
-// Replace this with your actual frontend URL on Vercel
-const frontendUrl = "https://job-board-pmj3.vercel.app/"; // Change this
 
-// Middleware for handling CORS
-app.use(
-  cors({
-    origin: frontendUrl, // Allow requests only from the frontend URL
-    methods: ["GET", "POST", "PUT", "DELETE"], // Allow specific HTTP methods
-    allowedHeaders: ["Content-Type", "Authorization"], // Allow headers
-  })
-);
+app.use('/*', cors())
 
-// Middleware to parse JSON bodies
 app.use(express.json());
 
-// Define your routes  
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/job", jobRouter);
 app.use("/api/v1/app", appRouter);
 
-// Handle preflight OPTIONS requests
-app.options("*", cors());
 
-// Error handling middleware
 app.use((err, req, res, next) => {
   if (res.headersSent) {
-    return next(err); // Delegate to the default error handler
+    return next(err); 
   }
   res.status(500).json({ error: "Something went wrong!" });
 });
 
-// Export the app for Vercel
 module.exports = app;

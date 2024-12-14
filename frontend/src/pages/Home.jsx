@@ -16,12 +16,14 @@ export default function Home() {
   const { userRole, userId } = useUserRole();
   const { isButton, setIsButton } = useSignupandSignin();
 
+  
+  
   useEffect(() => {
     // Fetch all jobs (for jobseekers)
     const fetchJobs = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("https://job-board-henna-omega.vercel.app/api/v1/job/jobs", {
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/job/jobs`, {
           headers: {
             Authorization: localStorage.getItem("token"),
           },
@@ -33,6 +35,7 @@ export default function Home() {
         setLoading(false);
       }
     };
+    
     fetchJobs();
   }, []);
 
@@ -42,7 +45,7 @@ export default function Home() {
       if (userRole === "employer" && userId) {
         setLoading(true);
         try {
-          const response = await axios.get(`https://job-board-henna-omega.vercel.app/api/v1/job/user/${userId}`, {
+          const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/job/user/${userId}`, {
             headers: {
               Authorization: localStorage.getItem("token"),
             },

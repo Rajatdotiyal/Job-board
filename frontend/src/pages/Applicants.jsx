@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 
+
 const Applicants = () => {
   const [candidates, setCandidates] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -16,7 +17,7 @@ const Applicants = () => {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `https://job-board-henna-omega.vercel.app/api/v1/app/job/${jobId}/applicants`,
+          `${import.meta.env.VITE_BACKEND_URL}/api/v1/app/job/${jobId}/applicants`,
           {
             headers: {
               Authorization: localStorage.getItem("token"), // Ensure employer's token is valid

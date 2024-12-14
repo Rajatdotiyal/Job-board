@@ -36,7 +36,7 @@ export default function JobSeeker() {
         formData.append("resume", resume);
 
         try {
-            const response = await axios.post("https://job-board-henna-omega.vercel.app/api/v1/user/info/jsdetails",
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/info/jsdetails`,
                 formData,
                 {
                     headers: {

@@ -18,7 +18,7 @@ export default function Role() {
         setError(null);
 
         try {
-            const response = await axios.post("https://job-board-henna-omega.vercel.app/api/v1/user/info/role", {
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/info/role`, {
                 role: selectedRole
             }, {
                 headers: {
